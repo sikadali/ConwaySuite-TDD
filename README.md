@@ -26,10 +26,10 @@ Here are for example the first 10 terms of the sequence beginning by 1:
 Printed lines should present in following format :
 
     1
-    11
-    21
-    1211
-    112221
+    1 1
+    2 1
+    1 2 1 1
+    1 1 2 2 2 1
 
 ## Selected Stack
 
