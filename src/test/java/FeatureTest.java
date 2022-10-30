@@ -20,7 +20,7 @@ public class FeatureTest {
 
     @Test
     public void print_n_first_lines_of_the_Conway_sequence () {
-        conwaySuite.generate(10);
+        conwaySuite.printSequence(10);
 
         verify(console).printLine("1");
         verify(console).printLine("11");
