@@ -19,14 +19,26 @@ public class ConwaySuite {
     public String generateNext(String line) {
         String compressedLine = line.replaceAll(SPACE_SEPARATOR, EMPTY_STRING);
 
-        if (compressedLine.length() > 1) {
-            return generateForIdenticalNumbers(compressedLine.substring(0, 1))
+        return generateForDistinctNumbers(compressedLine);
+    }
+
+    private static String generateForDistinctNumbers(String compressedLine) {
+        int indexNextDistinctNumber = indexNextDistinctNumber(compressedLine, 0);
+
+        if (indexNextDistinctNumber != compressedLine.length()-1 && compressedLine.length() > 1) {
+            return generateForIdenticalNumbers(compressedLine.substring(0, indexNextDistinctNumber+1))
                     + SPACE_SEPARATOR
-                    + generateForIdenticalNumbers(compressedLine.substring(1));
+                    + generateForIdenticalNumbers(compressedLine.substring(indexNextDistinctNumber+1));
         }
         return generateForIdenticalNumbers(compressedLine);
     }
 
+    private static int indexNextDistinctNumber(String line, int index) {
+        if (line.length() == 1 || line.charAt(0) != line.charAt(1)) {
+            return index;
+        }
+        return indexNextDistinctNumber(line.substring(1), index+1);
+    }
     private static String generateForIdenticalNumbers(String compressedLine) {
         return compressedLine.length() + SPACE_SEPARATOR + compressedLine.charAt(0);
     }

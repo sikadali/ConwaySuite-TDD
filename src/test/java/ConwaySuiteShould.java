@@ -29,5 +29,6 @@ public class ConwaySuiteShould {
         assertThat(conwaySuite.generateNext("2")).isEqualTo("1 2");
         assertThat(conwaySuite.generateNext("1 1")).isEqualTo("2 1");
         assertThat(conwaySuite.generateNext("2 1")).isEqualTo("1 2 1 1");
+        assertThat(conwaySuite.generateNext("1 1 2")).isEqualTo("2 1 1 2");
     }
 }
