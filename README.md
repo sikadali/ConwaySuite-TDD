@@ -2,12 +2,12 @@
 ## Problem description
 
 The goal of this kata is to develop a function that returns
-the first n lines of the Conway sequence, given one start number.
+the first n lines of the Conway sequence.
 
 To determine a term in the sequence, we need to take the previous term and read it, 
 indicating how many times each of its digits repeats.
 
-- The first term of the sequence is set by the user between 0 and 9, for example 1.
+- The first term of the sequence is set by the user between 0 and 9.
 
 - The second term of the sequence is obtained by reading the first term: "one 1" which gives 11.
 
@@ -17,7 +17,7 @@ indicating how many times each of its digits repeats.
 
 - And so on ...
 
-Here are for example the first 10 terms of the sequence beginning by 1:
+Here are for example the first 10 terms of the sequence :
 
     [1, 11, 21, 1211, 111221, 312211, 13112221, 1113213211, 31131211131221, 13211311123113112211]
 
